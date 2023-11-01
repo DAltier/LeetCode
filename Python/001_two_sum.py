@@ -30,18 +30,15 @@
 
 # Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
-#     @param {number[]} nums
-#     @param {number} target
-#     @return {number[]}
+"""
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+"""
 
 # Brute force
 class Solution(object):
     def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
         for i in range(len(nums)-1):
             for j in range(i+1, len(nums)):
                 if nums[i] + nums[j] == target:
@@ -51,11 +48,6 @@ class Solution(object):
 # Hash table
 class Solution1(object):
     def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
         hashMap = {}
         for i in range(len(nums)):
             complement = target - nums[i]
