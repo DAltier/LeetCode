@@ -40,11 +40,11 @@ class Solution(object):
             return s
         lines = [[] for i in range(numRows)]
         idx = 0
-        flag = False 
+        flag = False # for up and down movement
         for char in s:
             lines[idx].append(char)
             idx += 1 if flag else -1
-            if idx == -1 or idx == numRows:
+            if idx == -1 or idx == numRows: #toggle flag direction
                 flag = not flag
                 idx += 2 if flag else -2
         return "".join(["".join(line) for line in lines])
